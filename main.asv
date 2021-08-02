@@ -26,14 +26,14 @@ xlabel('Order Quantity')
 ylabel('Probability')
 
 figure
-plot(-2:0.025:6,pdf(pdLeadTime,-2:0.025:6),'Linewidth',2.5)
+plot(-50:50,pdf(pdDemand,-50:50),'Linewidth',2.5)
 hold on
-histogram(random(pdLeadTime,5000,1),'Normalization','pdf')
-% xlim([-10,50])
-% ylim([0,0.1])
+histogram(random(pdDemand,10000,1),'Normalization','pdf')
+xlim([-10,50])
+ylim([0,0.1])
 grid on
-title('Probability Distribution for Lead Time')
-xlabel('Time Taken')
+title('Probability Distribution for Demand')
+xlabel('Order Quantity')
 ylabel('Probability')
 
 %% One Year, Single Trajectory
